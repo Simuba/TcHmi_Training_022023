@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.35">
+	<Translations>
+		<Text TxtId="I am a message">
+			<Text LcId="1031"><![CDATA[Ich bin eine Meldung]]></Text>
+		</Text>
+	</Translations>
+	<DataTypes>
+		<DataType>
+			<Name GUID="{A2D33049-CC31-4ED5-9CF2-75D003CCA4A1}" PersistentType="true">MyEventClass</Name>
+			<DisplayName TxtId=""><![CDATA[MyEventClass_DisplayText]]></DisplayName>
+			<EventId>
+				<Name Id="1">MyMessage</Name>
+				<DisplayName TxtId=""><![CDATA[I am a message]]></DisplayName>
+				<Severity>Info</Severity>
+			</EventId>
+			<EventId>
+				<Name Id="2">MyAlarm</Name>
+				<DisplayName TxtId=""><![CDATA[I am an alarm {0}]]></DisplayName>
+				<Severity>Error</Severity>
+			</EventId>
+			<Hides>
+				<Hide GUID="{B0E2BB37-4FB8-4111-B6C8-F95A9E12DCFF}"/>
+				<Hide GUID="{166FA890-46C2-4B79-90A7-67AE218FDC73}"/>
+				<Hide GUID="{57AB5672-CC19-4D5A-9918-A45545990F11}"/>
+				<Hide GUID="{474C47BB-C1C3-4BBF-8AA0-171206E90062}"/>
+			</Hides>
+		</DataType>
+	</DataTypes>
+	<Project ProjectGUID="{8E3FD1D7-F2BB-4043-B410-CDCC3F06EF1E}" TargetNetId="192.168.10.17.1.1" Target64Bit="true" ShowHideConfigurations="#x106">
+		<System>
+			<Settings MaxCpus="2"/>
+			<Tasks>
+				<Task Id="3" Priority="20" CycleTime="100000" AmsPort="350" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+			</Tasks>
+		</System>
+		<Plc>
+			<Project GUID="{D0EAE419-D566-4D55-9E72-4B41D0CAECCF}" Name="Plc" PrjFilePath="Plc\Plc.plcproj" TmcFilePath="Plc\Plc.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcHash="{14DCD6BD-30DD-191E-4365-0AB97F67A3A8}">
+					<Name>Plc Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Contexts>
+						<Context>
+							<Id NeedCalleeCall="true">0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010030</OTCID>
+							</ManualConfig>
+							<Priority>20</Priority>
+							<CycleTime>10000000</CycleTime>
+						</Context>
+					</Contexts>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+		</Plc>
+	</Project>
+</TcSmProject>

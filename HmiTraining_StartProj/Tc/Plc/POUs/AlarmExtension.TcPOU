@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="AlarmExtension" Id="{7495b61b-c2b8-43af-8049-87b29744281f}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM AlarmExtension
+VAR
+	bAlarm		: BOOL;
+	iAlarm		: INT;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <LineIds Name="AlarmExtension">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

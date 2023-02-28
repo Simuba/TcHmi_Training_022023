@@ -1,0 +1,44 @@
+{
+    "alarmSymbols": {
+        "PLC1.AlarmExtension.bAlarm": {
+            "alarmSettings": {
+                "ALARMSETTING": {
+                    "alarmTextKey": "settingMatch",
+                    "condition": [
+                        {
+                            "comparator": "==",
+                            "path": "",
+                            "value": true
+                        }
+                    ],
+                    "enabled": true,
+                    "notificationType": 0,
+                    "severity": 1
+                }
+            },
+            "enabled": true,
+            "interval": "PT1S",
+            "onError": false
+        },
+        "PLC1.AlarmExtension.iAlarm": {
+            "alarmSettings": {
+                "ALARMSETTING": {
+                    "alarmTextKey": "settingMatch",
+                    "condition": [
+                        {
+                            "comparator": ">",
+                            "path": "",
+                            "value": 20.0
+                        }
+                    ],
+                    "enabled": true,
+                    "notificationType": 1,
+                    "severity": 3
+                }
+            },
+            "enabled": true,
+            "interval": "PT1S",
+            "onError": false
+        }
+    }
+}

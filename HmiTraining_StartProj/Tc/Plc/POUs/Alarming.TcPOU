@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Alarming" Id="{ecf07fd6-f111-49f0-9642-0a1d64acee76}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Alarming
+VAR
+	bInit 		: BOOL := TRUE;
+	bSendMsg	: BOOL;
+	fbMsg		: FB_TcMessage;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF bInit THEN
+	bInit := FALSE;
+	fbMsg.CreateEx(TC_Events.MyEventClass.MyMessage, 0);
+END_IF
+
+IF bSendMsg THEN
+	bSendMsg := FALSE;
+	fbMsg.Send(0);
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="Alarming">
+      <LineId Id="5" Count="0" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="11" Count="0" />
+      <LineId Id="10" Count="0" />
+      <LineId Id="13" Count="0" />
+      <LineId Id="12" Count="0" />
+      <LineId Id="14" Count="0" />
+      <LineId Id="16" Count="0" />
+      <LineId Id="15" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

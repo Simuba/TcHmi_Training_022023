@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="AlarmingEx" Id="{3f139806-cab8-4659-899b-e01e8e236e9e}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM AlarmingEx
+VAR
+	bInit			: BOOL := TRUE;
+	bRaise			: BOOL;
+	bClear			: BOOL;
+	
+	fbAlm			: FB_TcAlarm;
+	fbSourceInfo	: FB_TcSourceInfo;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF bInit THEN
+	bInit := FALSE;
+	
+	fbSourceInfo.Clear();
+	fbSourceInfo.sName := '%l%L_MyName%/l%';
+	
+	//fbAlm.CreateEx(TC_Events.MyEventClass.MyAlarm, TRUE, 0);
+	fbAlm.CreateEx(TC_Events.MyEventClass.MyAlarm, TRUE, fbSourceInfo);
+	
+	fbAlm.ipArguments.Clear();
+	fbAlm.ipArguments.AddString('BMK');
+END_IF
+
+IF bRaise THEN
+	bRaise := FALSE;
+	fbAlm.Raise(0);
+END_IF
+
+IF bClear AND (fbAlm.eConfirmationState = TcEventConfirmationState.Confirmed) THEN
+	bClear := FALSE;
+	fbAlm.Clear(0, FALSE);
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="AlarmingEx">
+      <LineId Id="3" Count="20" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

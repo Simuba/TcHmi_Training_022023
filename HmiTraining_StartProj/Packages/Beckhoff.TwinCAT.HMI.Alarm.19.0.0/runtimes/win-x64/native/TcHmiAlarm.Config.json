@@ -1,0 +1,103 @@
+{
+  "$schema": "../TcHmiSrv/schema/ExtensionSettings.Schema.json",
+  "version": "1.12.758.8",
+  "configVersion": "1.0.0.7",
+  "guid": "70b88086-1715-4568-9c52-70cba2acece0",
+  "visibility": "AlwaysShow",
+  "policies": [
+    "StrictPropertyValidation"
+  ],
+  "symbols": {
+    "ClearLoggedEvents": {
+      "readValue": {
+        "function": true
+      }
+    },
+    "Diagnostics": {
+      "userGroups": [
+        "__SystemUsers"
+      ],
+      "readValue": {
+        "function": true,
+        "readOnly": true,
+        "type": "object",
+        "properties": {
+          "database": {
+            "type": "object",
+            "properties": {
+              "databaseSize": {
+                "allOf": [
+                  {
+                    "$ref": "tchmi:general#/definitions/INT64"
+                  },
+                  {
+                    "readOnly": true,
+                    "propertyOrder": 1,
+                    "displayClass": "byte"
+                  }
+                ]
+              },
+              "numEntries": {
+                "type": "integer",
+                "readOnly": true,
+                "propertyOrder": 2
+              }
+            },
+            "required": [
+              "databaseSize",
+              "numEntries"
+            ]
+          },
+          "importedEventsCount": {
+            "propertyOrder": 1,
+            "readOnly": true,
+            "type": "integer"
+          },
+          "importedMessagesCount": {
+            "propertyOrder": 2,
+            "readOnly": true,
+            "type": "integer"
+          },
+          "importedInvalidAlarmsCount": {
+            "propertyOrder": 3,
+            "readOnly": true,
+            "type": "integer"
+          },
+          "cachedMessagesCount": {
+            "propertyOrder": 4,
+            "readOnly": true,
+            "type": "integer"
+          },
+          "cachedAlarmsCount": {
+            "propertyOrder": 5,
+            "readOnly": true,
+            "type": "integer"
+          },
+          "cachedInvalidAlarmsCount": {
+            "propertyOrder": 6,
+            "readOnly": true,
+            "type": "integer"
+          },
+          "activeAlarmsCount": {
+            "propertyOrder": 7,
+            "readOnly": true,
+            "type": "integer"
+          }
+        },
+        "required": [
+          "importedEventsCount",
+          "importedMessagesCount",
+          "importedInvalidAlarmsCount",
+          "cachedMessagesCount",
+          "cachedAlarmsCount",
+          "cachedInvalidAlarmsCount",
+          "activeAlarmsCount",
+          "database"
+        ]
+      }
+    }
+  },
+  "packageVersion": "19.0.0",
+  "productVersion": "1.12.758.8",
+  "signature": "lDiMS8uZANMVDLWqc0LkbqCQoOB/b9QT3bebdSTWcG03JrdPQxVwYmr04dnEzat0Qu4dwkyhbvwrGKQ45BOhtXvJh50WSxdlylR2fa2kGx9UeBP2Wm+CsjF01MCLgwObALMzU9eDLpD+EcHkDUouiZcaxBu38zYd0o0zkvDXQNjFTC27l6k3YTudyFjakfSo+ocP7z1bl/xNv0X2WQmefcTc9F1bFFNEFRyWPgckUuMF2VuUu5i8nLQZCTerz7rRnO3Zm0s4KqVZSQbykRf6cLVbc8J7GrBLCqb+/PzVhsnFu8/nKNaADQPSyTHWQ6kMJdMSXOJmNxCMFxc++8Mm1A=="
+}
