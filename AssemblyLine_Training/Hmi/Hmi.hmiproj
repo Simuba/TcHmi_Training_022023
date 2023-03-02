@@ -109,6 +109,118 @@
   <Target Name="Clean" DependsOnTargets="$(CleanDependsOn)" />
   <Target Name="ReBuild" DependsOnTargets="Clean; Build" />
   <ItemGroup>
+    <Content Include="Contents\C_EcDiag.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\C_Events.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\C_FetchData.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\C_Historize.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\C_Recipe.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Contents\C_Scope.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Functions\CheckResolution.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Functions\DownloadRecipe.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Functions\DownloadRecipe.js</DependentUpon>
+    </Content>
+    <Content Include="Functions\DownloadRecipe.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Functions\fetchData.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Functions\fetchData.js</DependentUpon>
+    </Content>
+    <Content Include="Functions\fetchData.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Functions\FunctionJS1.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Functions\FunctionJS1.js</DependentUpon>
+    </Content>
+    <Content Include="Functions\FunctionJS1.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Functions\ReadUrlParameter.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Functions\UploadRecipe.function.json">
+      <SubType>Content</SubType>
+      <DependentUpon>Functions\UploadRecipe.js</DependentUpon>
+    </Content>
+    <Content Include="Functions\UploadRecipe.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Mobile.view">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiEcDiagnostics\TcHmiEcDiagnostics.Config.default.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiEcDiagnostics\TcHmiEcDiagnostics.Config.remote.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiEcDiagnostics\TcHmiEcDiagnostics.Storage.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiRecipeManagement\TcHmiRecipeManagement.Config.default.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiRecipeManagement\TcHmiRecipeManagement.Config.remote.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiRecipeManagement\TcHmiRecipeManagement.Storage.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiScope\TcHmiScope.Config.default.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiScope\TcHmiScope.Config.remote.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiScope\TcHmiScope.Storage.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiSqliteHistorize\TcHmiSqliteHistorize.Config.default.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiSqliteHistorize\TcHmiSqliteHistorize.Config.remote.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiSqliteHistorize\TcHmiSqliteHistorize.Storage.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UserControls\UC_Axis.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UserControls\UC_Axis.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>UserControls\UC_Axis.usercontrol</DependentUpon>
+    </Content>
+    <Content Include="UserControls\UC_Feeder.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UserControls\UC_Feeder.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>UserControls\UC_Feeder.usercontrol</DependentUpon>
+    </Content>
+    <Content Include="UserControls\UserControl1.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UserControls\UserControl1.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>UserControls\UserControl1.usercontrol</DependentUpon>
+    </Content>
     <Folder Include="Fonts\" />
     <Folder Include="Images" />
     <Folder Include="Images\Manifest" />
@@ -118,6 +230,12 @@
     <Folder Include="KeyboardLayouts\" />
     <Folder Include="Localization" />
     <Folder Include="Contents" />
+    <Folder Include="Functions" />
+    <Folder Include="Server\TcHmiEcDiagnostics" />
+    <Folder Include="Server\TcHmiRecipeManagement" />
+    <Folder Include="Server\TcHmiScope" />
+    <Folder Include="Server\TcHmiSqliteHistorize" />
+    <Folder Include="UserControls" />
     <Folder Include="Themes" />
     <Folder Include="Themes\Base-Dark\Images\" />
     <Folder Include="Themes\Base\" />
@@ -133,6 +251,27 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Contents\C_Settings.content">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\ch-FR.localization">
+      <SubType>Content</SubType>
+      <DependentUpon>Localization\ch-FR.tpl.localization</DependentUpon>
+    </Content>
+    <Content Include="Localization\ch-FR.tpl.localization">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\de-DE.localization">
+      <SubType>Content</SubType>
+      <DependentUpon>Localization\de-DE.tpl.localization</DependentUpon>
+    </Content>
+    <Content Include="Localization\de-DE.tpl.localization">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Localization\en-US.localization">
+      <SubType>Content</SubType>
+      <DependentUpon>Localization\en-US.tpl.localization</DependentUpon>
+    </Content>
+    <Content Include="Localization\en-US.tpl.localization">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Server\TcHmiLua\TcHmiLua.Config.default.json">
@@ -160,6 +299,12 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Server\TcHmiUserManagement\TcHmiUserManagement.Storage.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Themes\Base\TcHmi.Controls.ResponsiveNavigation.TcHmiNavigationBar\Images\menu.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Themes\Base\TcHmi.Controls.ResponsiveNavigation.TcHmiNavigationBar\Style.css">
       <SubType>Content</SubType>
     </Content>
     <Content Include="tsconfig.tpl.json">
@@ -277,24 +422,6 @@
       <SubType>Content</SubType>
       <Visible>true</Visible>
     </Content>
-    <Content Include="Localization\de.tpl.localization">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
-    <Content Include="Localization\en.tpl.localization">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-    </Content>
-    <Content Include="Localization\de.localization">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-      <DependentUpon>Localization\de.tpl.localization</DependentUpon>
-    </Content>
-    <Content Include="Localization\en.localization">
-      <SubType>Content</SubType>
-      <Visible>true</Visible>
-      <DependentUpon>Localization\en.tpl.localization</DependentUpon>
-    </Content>
     <Content Include="KeyboardLayouts\German - compact.keyboard.json">
       <SubType>Content</SubType>
       <Visible>true</Visible>
@@ -399,6 +526,8 @@
       <Visible>false</Visible>
     </Content>
     <Folder Include="Themes\Base\Images\" />
+    <Folder Include="Themes\Base\TcHmi.Controls.ResponsiveNavigation.TcHmiNavigationBar\" />
+    <Folder Include="Themes\Base\TcHmi.Controls.ResponsiveNavigation.TcHmiNavigationBar\Images\" />
   </ItemGroup>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

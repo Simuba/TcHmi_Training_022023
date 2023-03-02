@@ -6,7 +6,9 @@ VAR
 	iCounter : INT;
 	bToggle		: BOOL;
 	bReset		: BOOL;
-	sText		: string;
+	sText		: STRING;
+	
+	stMyType		: ST_MyType;
 	
 END_VAR
 ]]></Declaration>

@@ -1,0 +1,21 @@
+{
+    "devices": {
+        "Device1": {
+            "enabled": true,
+            "masterNetId": "192.168.10.17.4.1",
+            "targetNetId": "192.168.10.17.1.1"
+        }
+    },
+    "vendorsOverwrite": {
+        "1": {
+            "devices": [],
+            "longName": "EtherCAT Technology Group",
+            "shortName": "ETG"
+        },
+        "2": {
+            "devices": [],
+            "longName": "Beckhoff Automation GmbH & Co. KG",
+            "shortName": "Beckhoff"
+        }
+    }
+}

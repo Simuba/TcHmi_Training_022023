@@ -1,4 +1,43 @@
 ﻿{
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "definitions": {}
+  "definitions": {
+    "UC_Axis": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\UC_Axis.usercontrol.json",
+      "id": "tchmi:project#/definitions/UC_Axis",
+      "type": "object"
+    },
+    "UserControl1": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\UserControl1.usercontrol.json",
+      "id": "tchmi:project#/definitions/UserControl1",
+      "type": "object"
+    },
+    "UC_Feeder": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\UC_Feeder.usercontrol.json",
+      "id": "tchmi:project#/definitions/UC_Feeder",
+      "type": "object"
+    },
+    "C_Historize": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "Contents\\C_Historize.usercontrol.json",
+      "type": "object",
+      "id": "tchmi:project#/definitions/C_Historize"
+    },
+    "FetchData": {
+      "items": {
+        "$ref": "tchmi:general#/definitions/Object"
+      },
+      "type": "array"
+    }
+  }
 }

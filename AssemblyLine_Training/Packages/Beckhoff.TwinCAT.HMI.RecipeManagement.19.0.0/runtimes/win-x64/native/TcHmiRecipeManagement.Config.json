@@ -1,0 +1,174 @@
+{
+  "$schema": "../TcHmiSrv/schema/ExtensionSettings.Schema.json",
+  "version": "1.12.758.8",
+  "configVersion": "1.0.0.14",
+  "guid": "202AA035-2258-492E-965D-DE1EA9D12D59",
+  "visibility": "AlwaysShow",
+  "policies": [
+    "StrictPropertyValidation"
+  ],
+  "symbols": {
+    "ActivateRecipe": {
+      "userGroups": [
+        "__SystemUsers"
+      ],
+      "readValue": {
+        "function": true
+      },
+      "writeValue": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ]
+      },
+      "description": "Write all symbols of the given recipe.",
+      "sample": {
+        "description": "List the whole path to the recipe",
+        "value": {
+          "path": "testfolder::testRecipe"
+        }
+      }
+    },
+    "ReadFromTarget": {
+      "userGroups": [
+        "__SystemUsers"
+      ],
+      "readValue": {
+        "function": true,
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "values": {
+            "type": "object",
+            "additionalProperties": {}
+          }
+        }
+      },
+      "writeValue": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ]
+      },
+      "description": "Read all symbols of the given recipe",
+      "sample": {
+        "description": "List the whole path to the recipe",
+        "value": {
+          "path": "testfolder::testRecipe"
+        }
+      }
+    },
+    "UpdateRecipe": {
+      "userGroups": [
+        "__SystemUsers"
+      ],
+      "readValue": {
+        "function": true,
+        "type": "object",
+        "properties": {
+          "info": {
+            "description": "List of updates made",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "writeValue": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "path"
+        ]
+      },
+      "description": "After changing a recipeType updateRecipe is used to update values of all recipes based on this recipeType",
+      "sample": {
+        "description": "Updates recipe values from recipe testfolder::testRecipe",
+        "value": {
+          "path": "testfolder::testRecipe"
+        }
+      }
+    },
+    "GetRecipes": {
+      "userGroups": [
+        "__SystemUsers"
+      ],
+      "readValue": {
+        "function": true,
+        "type": "array",
+        "items": {
+          "recipes": {
+            "type": "string"
+          }
+        }
+      },
+      "writeValue": {
+        "type": "object",
+        "properties": {
+          "recipeTypePath": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "recipeTypePath"
+        ]
+      },
+      "description": "Returns all recipes based on a recipe type",
+      "sample": {
+        "description": "Get all recipes based on a specific recipe type path.",
+        "value": {
+          "recipeTypePath": "testfolder::testRecipeType"
+        }
+      }
+    },
+    "GetActiveRecipes": {
+      "userGroups": [
+        "__SystemUsers"
+      ],
+      "readValue": {
+        "function": true,
+        "type": "array",
+        "items": {
+          "recipe": {
+            "type": "string"
+          }
+        }
+      },
+      "writeValue": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "description": "recipe name(s)"
+            }
+          },
+          {
+            "$ref": "tchmi:general#/definitions/VOID"
+          }
+        ]
+      },
+      "description": "Returns active recipes."
+    }
+  },
+  "packageVersion": "19.0.0",
+  "productVersion": "1.12.758.8",
+  "signature": "k90Uau8xDEBvyJGfnudjrtq9b5lDpvBrBa5Mg570m7WbitDP9ylID9dv1mx2VGBZ7/9km/Ov3gQnkxoBXxEvCgB8AyjiSaO3BllQhNoQi9UhQAZlzt7NVqbN+nE1SZlQnmwmxsVYsJSTKgXNWIay4uRXn3ryoslQDAHJCISVntyqQ5uFvs6ieMseL336m5nD/x2cDqehyAKTszoY/Bn+m7V7xIdiJ/EiwyMlt/Zr0FWz7XZepdM1mUkV8bcXs/RSI8maBzUYUYZaxXY4ZS48X1vZBjtf2mSReviEjSjm/T3y7VRRe9S/MlLpn2gfKj4QIMM0WQI46l8YCM1KpZIIbw=="
+}

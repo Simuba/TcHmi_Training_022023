@@ -31,6 +31,13 @@
     <HmiInitial>1.12.758.8</HmiInitial>
     <HmiRecent>1.12.758.8</HmiRecent>
     <HmiServerNodeAdvancedView>False</HmiServerNodeAdvancedView>
+    <HmiTmcFiles>[
+  {
+    "FileName": "Tc\\Plc\\Plc.tmc",
+    "RootNamespace": "PLC1",
+    "IsFromSolution": false
+  }
+]</HmiTmcFiles>
   </PropertyGroup>
   <PropertyGroup>
     <TwinCATHmi_Tasks>$(TcHmiDirectory)\MSBuild\Beckhoff.TwinCAT.HMI.tasks</TwinCATHmi_Tasks>
@@ -109,6 +116,20 @@
   <Target Name="Clean" DependsOnTargets="$(CleanDependsOn)" />
   <Target Name="ReBuild" DependsOnTargets="Clean; Build" />
   <ItemGroup>
+    <Content Include="UserControls\MyControl1.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UserControls\MyControl1.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>UserControls\MyControl1.usercontrol</DependentUpon>
+    </Content>
+    <Content Include="UserControls\MyControl2.usercontrol">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UserControls\MyControl2.usercontrol.json">
+      <SubType>Content</SubType>
+      <DependentUpon>UserControls\MyControl2.usercontrol</DependentUpon>
+    </Content>
     <Folder Include="Fonts\" />
     <Folder Include="Images" />
     <Folder Include="Images\Manifest" />
@@ -117,6 +138,7 @@
     <Folder Include="Imports\Videos" />
     <Folder Include="KeyboardLayouts\" />
     <Folder Include="Localization" />
+    <Folder Include="UserControls" />
     <Folder Include="Server\TcHmiAlarm" />
     <Folder Include="Server\TcHmiEventLogger" />
     <Folder Include="Themes" />

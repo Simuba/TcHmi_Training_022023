@@ -1,233 +1,47 @@
 ﻿<div id="C_Settings" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-right="0" data-tchmi-bottom="0">
 
-
-
-<div id="grdSettings" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-left-unit="px" data-tchmi-top-unit="px" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-width-unit="px" data-tchmi-height-unit="px">
-<script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+<div id="TcHmiLocalizationSelect" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiLocalizationSelect" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="78" data-tchmi-top-unit="px" data-tchmi-width="264" data-tchmi-width-unit="px">
+<script data-tchmi-target-attribute="data-tchmi-localization-mapping" type="application/json">
 [
   {
-    "width": 1.0,
-    "widthUnit": "factor",
-    "widthMode": "Value",
-    "maxWidth": null,
-    "maxWidthUnit": "px",
-    "minWidth": null,
-    "minWidthUnit": "px",
-    "overflow": false
+    "code": "de",
+    "text": "German"
   },
   {
-    "width": 120.0,
-    "widthUnit": "px",
-    "widthMode": "Value",
-    "maxWidth": null,
-    "maxWidthUnit": "px",
-    "minWidth": null,
-    "minWidthUnit": "px",
-    "overflow": false
+    "code": "de-DE",
+    "text": "German (Germany)"
   },
   {
-    "width": 120.0,
-    "widthUnit": "px",
-    "widthMode": "Value",
-    "maxWidth": null,
-    "maxWidthUnit": "px",
-    "minWidth": null,
-    "minWidthUnit": "px",
-    "overflow": false
+    "code": "en",
+    "text": "English"
   },
   {
-    "width": 120.0,
-    "widthUnit": "px",
-    "widthMode": "Value",
-    "maxWidth": null,
-    "maxWidthUnit": "px",
-    "minWidth": null,
-    "minWidthUnit": "px",
-    "overflow": false
-  },
-  {
-    "width": 120.0,
-    "widthUnit": "px",
-    "widthMode": "Value",
-    "maxWidth": null,
-    "maxWidthUnit": "px",
-    "minWidth": null,
-    "minWidthUnit": "px",
-    "overflow": false
-  },
-  {
-    "width": 1.0,
-    "widthUnit": "factor",
-    "widthMode": "Value",
-    "maxWidth": null,
-    "maxWidthUnit": "px",
-    "minWidth": null,
-    "minWidthUnit": "px",
-    "overflow": false
+    "code": "en-US",
+    "text": "English (United States)"
   }
 ]
 </script>
-<script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
-[
-  {
-    "height": 1.0,
-    "heightUnit": "factor",
-    "heightMode": "Value",
-    "maxHeight": null,
-    "maxHeightUnit": "px",
-    "minHeight": null,
-    "minHeightUnit": "px",
-    "overflow": false
-  },
-  {
-    "height": 60.0,
-    "heightUnit": "px",
-    "heightMode": "Value",
-    "maxHeight": null,
-    "maxHeightUnit": "px",
-    "minHeight": null,
-    "minHeightUnit": "px",
-    "overflow": false
-  },
-  {
-    "height": 60.0,
-    "heightUnit": "px",
-    "heightMode": "Value",
-    "maxHeight": null,
-    "maxHeightUnit": "px",
-    "minHeight": null,
-    "minHeightUnit": "px",
-    "overflow": false
-  },
-  {
-    "height": 60.0,
-    "heightUnit": "px",
-    "heightMode": "Value",
-    "maxHeight": null,
-    "maxHeightUnit": "px",
-    "minHeight": null,
-    "minHeightUnit": "px",
-    "overflow": false
-  },
-  {
-    "height": 1.0,
-    "heightUnit": "factor",
-    "heightMode": "Value",
-    "maxHeight": null,
-    "maxHeightUnit": "px",
-    "minHeight": null,
-    "minHeightUnit": "px",
-    "overflow": false
-  }
-]
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
 </script>
 
-<div id="btnEnglish" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-grid-column-index="2" data-tchmi-grid-row-index="1" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-text="%l%L_English%/l%" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-word-wrap="True" data-tchmi-right="5" data-tchmi-bottom="5" data-tchmi-width-unit="px" data-tchmi-height-unit="px">
-
-
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
-[
-  {
-    "event": "btnEnglish.onPressed",
-    "actions": [
-      {
-        "objectType": "Function",
-        "active": true,
-        "fn": "TcHmi.Functions.Beckhoff.SetLocale",
-        "fnParams": [
-          {
-            "objectType": "StaticValue",
-            "valueType": "tchmi:general#/definitions/ProjectLocale",
-            "value": "en-US"
-          }
-        ],
-        "asyncWait": true
-      }
-    ]
-  }
-]
+</div>
+<div id="TcHmiThemeSelect" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiThemeSelect" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="332" data-tchmi-left-unit="px" data-tchmi-top="78" data-tchmi-top-unit="px" data-tchmi-width="264" data-tchmi-width-unit="px">
+<script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
+{
+  "top": 3,
+  "right": 3,
+  "bottom": 3,
+  "left": 3
+}
 </script>
-</div>
-
-<div id="btnGerman" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-grid-column-index="3" data-tchmi-grid-row-index="1" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-text="%l%L_German%/l%" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-word-wrap="True" data-tchmi-right="5" data-tchmi-bottom="5" data-tchmi-width-unit="px" data-tchmi-height-unit="px">
-
-
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
-[
-  {
-    "event": "btnGerman.onPressed",
-    "actions": [
-      {
-        "objectType": "Function",
-        "active": true,
-        "fn": "TcHmi.Functions.Beckhoff.SetLocale",
-        "fnParams": [
-          {
-            "objectType": "StaticValue",
-            "valueType": "tchmi:general#/definitions/ProjectLocale",
-            "value": "de-DE"
-          }
-        ],
-        "asyncWait": true
-      }
-    ]
-  }
-]
-</script>
-</div>
-
-<div id="TcHmi_Controls_Beckhoff_TcHmiImage" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiImage" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="1" data-tchmi-left="0" data-tchmi-left-unit="px"  data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-width-unit="px" data-tchmi-height-unit="px" data-tchmi-src="Images/language_normal.svg">
 
 </div>
-
-<div id="btnSwitchUser" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-grid-column-index="3" data-tchmi-grid-row-index="2" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-text="Goto Login" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-word-wrap="True" data-tchmi-right="5" data-tchmi-bottom="5" data-tchmi-width-unit="px" data-tchmi-height-unit="px">
-
-
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
-[
-  {
-    "event": "btnSwitchUser.onPressed",
-    "actions": [
-      {
-        "objectType": "Function",
-        "active": true,
-        "fn": "TcHmi.Functions.Beckhoff.GoToLoginPage",
-        "fnParams": [],
-        "asyncWait": true
-      }
-    ]
-  }
-]
-</script>
+<div id="umMain" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiUserManagement" data-tchmi-height="48" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="124" data-tchmi-top-unit="px" data-tchmi-width="288" data-tchmi-width-unit="px" data-tchmi-allow-switch-user="true">
 </div>
-
-<div id="btnLogout_1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-grid-column-index="2" data-tchmi-grid-row-index="2" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-text="%l%L_Logout%/l%" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-word-wrap="True" data-tchmi-right="5" data-tchmi-bottom="5" data-tchmi-width-unit="px" data-tchmi-height-unit="px">
-
-
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
-[
-  {
-    "event": "btnLogout_1.onPressed",
-    "actions": [
-      {
-        "objectType": "Function",
-        "active": true,
-        "fn": "TcHmi.Functions.Beckhoff.Logout",
-        "fnParams": [
-          {
-            "objectType": "StaticValue",
-            "valueType": "tchmi:general#/definitions/Boolean",
-            "value": true
-          }
-        ],
-        "asyncWait": true
-      }
-    ]
-  }
-]
-</script>
-</div>
-
-</div>
-
 </div>

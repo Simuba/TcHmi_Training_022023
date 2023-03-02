@@ -1,0 +1,71 @@
+beckhoff-ec-diagnostics-process-data-view {
+    display: grid;
+    padding: 10px;
+    grid-gap: 0 10px;
+    grid-template-columns: repeat(8, max-content);
+    justify-content: left;
+    overflow-x: auto;
+}
+beckhoff-ec-diagnostics-process-data-view .headline {
+    font-size: 16px;
+}
+beckhoff-ec-diagnostics-process-data-view .entry-cell {
+    display: flex;
+    height: 30px;
+    align-items: center;
+}
+beckhoff-ec-diagnostics-process-data-view .process-data-chart-wrapper .max-value {
+    cursor: pointer;
+    font-family: monospace;
+    position: absolute;
+    left: 0px;
+    top: 3px;
+    text-align: left;
+    padding: 1px 5px;
+    user-select: none;
+}
+beckhoff-ec-diagnostics-process-data-view .process-data-chart-wrapper .min-value {
+    cursor: pointer;
+    font-family: monospace;
+    position: absolute;
+    left: 0px;
+    bottom: 6px;
+    text-align: left;
+    padding: 1px 5px;
+    user-select: none;
+}
+beckhoff-ec-diagnostics-process-data-view .process-data-chart-wrapper .current-value {
+    cursor: pointer;
+    font-family: monospace;
+    position: absolute;
+    right: 10px;
+    top: 3px;
+    text-align: left;
+    padding: 1px 5px;
+    user-select: none;
+}
+beckhoff-ec-diagnostics-process-data-view .forced-process-data-value-flag {
+    padding: 5px 0px;
+    border-radius: 100px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+beckhoff-ec-diagnostics-process-data-view .forced-process-data-value-flag-placeholder {
+    padding: 5px 0px;
+    width: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+beckhoff-ec-diagnostics-process-data-view .entry-name-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: text-bottom;
+}

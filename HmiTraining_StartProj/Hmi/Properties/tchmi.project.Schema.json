@@ -1,4 +1,32 @@
 ﻿{
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "definitions": {}
+  "definitions": {
+    "MyControl1": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\MyControl1.usercontrol.json",
+      "id": "tchmi:project#/definitions/MyControl1",
+      "type": "object"
+    },
+    "MyControl2": {
+      "frameworkControlNamespace": "TcHmi.Controls.Beckhoff",
+      "frameworkControlType": "TcHmi.Controls.System.TcHmiUserControl",
+      "frameworkInstanceOf": "TcHmi.Controls.System.TcHmiControl",
+      "frameworkUserControlConfig": "UserControls\\MyControl2.usercontrol.json",
+      "id": "tchmi:project#/definitions/MyControl2",
+      "type": "object"
+    },
+    "MyType": {
+      "properties": {
+        "bValue": {
+          "$ref": "tchmi:general#/definitions/BOOL"
+        },
+        "iValue": {
+          "$ref": "tchmi:general#/definitions/INT"
+        }
+      },
+      "type": "object"
+    }
+  }
 }

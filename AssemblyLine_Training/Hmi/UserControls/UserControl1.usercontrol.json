@@ -1,0 +1,39 @@
+﻿{
+  "parameters": [
+    {
+      "name": "data-tchmi-feederinfo",
+      "displayName": "FeederInfo",
+      "visible": true,
+      "type": "tchmi:server#/definitions/PLC1.ST_HmiFeederInfo",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "FeederInfo",
+      "propertySetterName": "setFeederInfo",
+      "propertyGetterName": "getFeederInfo",
+      "refTo": ""
+    },
+    {
+      "name": "data-tchmi-automode",
+      "displayName": "AutoMode",
+      "visible": true,
+      "type": "tchmi:server#/definitions/PLC1.ST_HmiAutomaticMode",
+      "category": "",
+      "description": "",
+      "requiredOnCompile": false,
+      "readOnly": false,
+      "bindable": true,
+      "heritable": true,
+      "propertyName": "AutoMode",
+      "propertySetterName": "setAutoMode",
+      "propertyGetterName": "getAutoMode",
+      "refTo": ""
+    }
+  ],
+  "virtualRights": [],
+  "$schema": "./../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.758.8/runtimes/native1.12-tchmi/Schema/UserControlConfig.Schema.json",
+  "description": ""
+}

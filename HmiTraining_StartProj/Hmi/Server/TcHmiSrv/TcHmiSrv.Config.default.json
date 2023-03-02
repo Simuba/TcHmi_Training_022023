@@ -26,7 +26,22 @@
     "DEFAULTTIMEFORMATLOCALE": "client",
     "DEFAULTTIMEZONE": "client",
     "DEFAULTUSERGROUP": "__SystemUsers",
-    "DEFINITIONS": {},
+    "DEFINITIONS": {
+        "PLC1.ST_MyType": {
+            "properties": {
+                "bValue": {
+                    "$ref": "tchmi:general#/definitions/BOOL"
+                },
+                "iValue": {
+                    "$ref": "tchmi:general#/definitions/INT"
+                },
+                "sValue": {
+                    "$ref": "tchmi:general#/definitions/STRING%2880%29"
+                }
+            },
+            "type": "object"
+        }
+    },
     "DEFLATECOMPRESSIONLEVEL": 5,
     "DIAGNOSTICS_DOMAINS": [],
     "DISABLED_CONFIGURATION_HINTS": [],
@@ -2474,7 +2489,7 @@
         },
         "PLC1.MAIN.iCounter": {
             "ACCESS": 3,
-            "DOMAIN": "ADS",
+            "DOMAIN": "TMC",
             "DYNAMIC": true,
             "MAPPING": "PLC1::MAIN::iCounter",
             "SCHEMA": {
@@ -2489,6 +2504,16 @@
             "MAPPING": "PLC1::MAIN::sText",
             "SCHEMA": {
                 "$ref": "tchmi:general#/definitions/STRING%2880%29"
+            },
+            "USEMAPPING": true
+        },
+        "PLC1.MAIN.stMyType": {
+            "ACCESS": 3,
+            "DOMAIN": "ADS",
+            "DYNAMIC": true,
+            "MAPPING": "PLC1::MAIN::stMyType",
+            "SCHEMA": {
+                "$ref": "tchmi:server#/definitions/PLC1.ST_MyType"
             },
             "USEMAPPING": true
         },
@@ -3615,6 +3640,7 @@
                 "PLC1.MAIN.bToggle": 3,
                 "PLC1.MAIN.iCounter": 3,
                 "PLC1.MAIN.sText": 3,
+                "PLC1.MAIN.stMyType": 3,
                 "SetLocale": 3,
                 "SubscribeEvents": 3,
                 "TcHmiAlarm.Diagnostics": 1,

@@ -38,9 +38,16 @@
           "name": "Themes/Base/BaseStyle.css",
           "description": "",
           "type": "Stylesheet"
+        },
+        {
+          "name": "Themes/Base/TcHmi.Controls.ResponsiveNavigation.TcHmiNavigationBar/Style.css",
+          "description": "",
+          "type": "Stylesheet"
         }
       ],
-      "replacesThemeForControls": []
+      "replacesThemeForControls": [
+        "TcHmi.Controls.ResponsiveNavigation.TcHmiNavigationBar"
+      ]
     }
   },
   "dependencyFiles": [
@@ -48,12 +55,59 @@
       "name": "Fonts/Fonts.css",
       "description": "",
       "type": "Stylesheet"
+    },
+    {
+      "name": "Functions/ReadUrlParameter.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "Functions/CheckResolution.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "Functions/DownloadRecipe.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "Functions/fetchData.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "Functions/FunctionJS1.js",
+      "description": "",
+      "type": "JavaScript"
+    },
+    {
+      "name": "Functions/UploadRecipe.js",
+      "description": "",
+      "type": "JavaScript"
     }
   ],
-  "userControls": [],
+  "userControls": [
+    {
+      "url": "UserControls/UC_Axis.usercontrol"
+    },
+    {
+      "url": "UserControls/UC_Feeder.usercontrol"
+    },
+    {
+      "url": "UserControls/UserControl1.usercontrol"
+    }
+  ],
   "content": [
     {
-      "url": "Contents/C_Settings.content",
+      "url": "Contents/C_Historize.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Contents/C_Recipe.content",
       "preload": false,
       "keepAlive": false,
       "loadSync": false,
@@ -65,9 +119,50 @@
       "keepAlive": false,
       "loadSync": false,
       "preloadBindings": false
+    },
+    {
+      "url": "Contents/C_Settings.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Contents/C_Scope.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Contents/C_EcDiag.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Contents/C_Events.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Contents/C_FetchData.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
     }
   ],
   "views": [
+    {
+      "url": "Mobile.view",
+      "preload": false,
+      "keepAlive": false,
+      "preloadBindings": false
+    },
     {
       "url": "Desktop.view",
       "preload": false,
@@ -75,16 +170,238 @@
       "preloadBindings": false
     }
   ],
-  "userFunctions": [],
+  "userFunctions": [
+    {
+      "url": "Functions/DownloadRecipe.js"
+    },
+    {
+      "url": "Functions/fetchData.js"
+    },
+    {
+      "url": "Functions/FunctionJS1.js"
+    },
+    {
+      "url": "Functions/UploadRecipe.js"
+    }
+  ],
   "symbols": {
-    "internal": {},
+    "internal": {
+      "SelectedFeeder": {
+        "value": 1,
+        "type": "tchmi:general#/definitions/INT",
+        "persist": false,
+        "readonly": false
+      },
+      "LineGraph_F01_X": {
+        "value": [
+          {
+            "yAxisId": 1,
+            "legendName": "",
+            "scaleFactor": 1.0,
+            "showAxis": true,
+            "lineWidth": 1,
+            "pointDot": false,
+            "pointDotRadius": 3,
+            "pointDotStrokeWidth": 1,
+            "lineColor": {
+              "color": "rgba(71, 148, 218, 1)"
+            },
+            "pointDotFillColor": {
+              "color": "rgba(71, 148, 218, 1)"
+            },
+            "pointDotStrokeColor": {
+              "color": "rgba(71, 148, 218, 1)"
+            },
+            "pointDotInStopMode": false,
+            "symbol": "PLC1.MAIN.fbFeeder1.stHmi.stFeederInfo.stAxisX.fActPosition"
+          },
+          {
+            "yAxisId": 2,
+            "legendName": "",
+            "scaleFactor": 1.0,
+            "showAxis": true,
+            "lineWidth": 1,
+            "pointDot": false,
+            "pointDotRadius": 3,
+            "pointDotStrokeWidth": 1,
+            "lineColor": {
+              "color": "rgba(234, 185, 34, 1)"
+            },
+            "pointDotFillColor": {
+              "color": "rgba(234, 185, 34, 1)"
+            },
+            "pointDotStrokeColor": {
+              "color": "rgba(234, 185, 34, 1)"
+            },
+            "pointDotInStopMode": false,
+            "symbol": "PLC1.MAIN.fbFeeder1.stHmi.stFeederInfo.stAxisX.fActVelocity"
+          }
+        ],
+        "type": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartLineGraphDescriptionDefinitionList",
+        "persist": false,
+        "readonly": false
+      },
+      "LineGraph_F01_Y": {
+        "value": [
+          {
+            "yAxisId": 1,
+            "legendName": "",
+            "scaleFactor": 1.0,
+            "showAxis": true,
+            "lineWidth": 1,
+            "pointDot": false,
+            "pointDotRadius": 3,
+            "pointDotStrokeWidth": 1,
+            "lineColor": {
+              "color": "rgba(71, 148, 218, 1)"
+            },
+            "pointDotFillColor": {
+              "color": "rgba(71, 148, 218, 1)"
+            },
+            "pointDotStrokeColor": {
+              "color": "rgba(71, 148, 218, 1)"
+            },
+            "pointDotInStopMode": false,
+            "symbol": "PLC1.MAIN.fbFeeder1.stHmi.stFeederInfo.stAxisY.fActPosition"
+          },
+          {
+            "yAxisId": 2,
+            "legendName": "",
+            "scaleFactor": 1.0,
+            "showAxis": true,
+            "lineWidth": 1,
+            "pointDot": false,
+            "pointDotRadius": 3,
+            "pointDotStrokeWidth": 1,
+            "lineColor": {
+              "color": "rgba(234, 185, 34, 1)"
+            },
+            "pointDotFillColor": {
+              "color": "rgba(234, 185, 34, 1)"
+            },
+            "pointDotStrokeColor": {
+              "color": "rgba(234, 185, 34, 1)"
+            },
+            "pointDotInStopMode": false,
+            "symbol": "PLC1.MAIN.fbFeeder1.stHmi.stFeederInfo.stAxisY.fActVelocity"
+          }
+        ],
+        "type": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartLineGraphDescriptionDefinitionList",
+        "persist": false,
+        "readonly": false
+      },
+      "LineGraph_F02_X": {
+        "value": [
+          {
+            "yAxisId": 1,
+            "legendName": "",
+            "scaleFactor": 1.0,
+            "showAxis": true,
+            "lineWidth": 1,
+            "pointDot": false,
+            "pointDotRadius": 3,
+            "pointDotStrokeWidth": 1,
+            "lineColor": {
+              "color": "rgba(71, 148, 218, 1)"
+            },
+            "pointDotFillColor": {
+              "color": "rgba(71, 148, 218, 1)"
+            },
+            "pointDotStrokeColor": {
+              "color": "rgba(71, 146, 218, 1)"
+            },
+            "pointDotInStopMode": false,
+            "symbol": "PLC1.MAIN.fbFeeder2.stHmi.stFeederInfo.stAxisX.fActPosition"
+          },
+          {
+            "yAxisId": 2,
+            "legendName": "",
+            "scaleFactor": 1.0,
+            "showAxis": true,
+            "lineWidth": 1,
+            "pointDot": false,
+            "pointDotRadius": 3,
+            "pointDotStrokeWidth": 1,
+            "lineColor": {
+              "color": "rgba(234, 185, 34, 1)"
+            },
+            "pointDotFillColor": {
+              "color": "rgba(234, 185, 34, 1)"
+            },
+            "pointDotStrokeColor": {
+              "color": "rgba(234, 185, 34, 1)"
+            },
+            "pointDotInStopMode": false,
+            "symbol": "PLC1.MAIN.fbFeeder2.stHmi.stFeederInfo.stAxisX.fActVelocity"
+          }
+        ],
+        "type": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartLineGraphDescriptionDefinitionList",
+        "persist": false,
+        "readonly": false
+      },
+      "LineGraph_F02_Y": {
+        "value": [
+          {
+            "yAxisId": 1,
+            "legendName": "",
+            "scaleFactor": 1.0,
+            "showAxis": true,
+            "lineWidth": 1,
+            "pointDot": false,
+            "pointDotRadius": 3,
+            "pointDotStrokeWidth": 1,
+            "lineColor": {
+              "color": "rgba(71, 148, 218, 1)"
+            },
+            "pointDotFillColor": {
+              "color": "rgba(71, 148, 218, 1)"
+            },
+            "pointDotStrokeColor": {
+              "color": "rgba(71, 148, 218, 1)"
+            },
+            "pointDotInStopMode": false,
+            "symbol": "PLC1.MAIN.fbFeeder2.stHmi.stFeederInfo.stAxisY.fActPosition"
+          },
+          {
+            "yAxisId": 2,
+            "legendName": "",
+            "scaleFactor": 1.0,
+            "showAxis": true,
+            "lineWidth": 1,
+            "pointDot": false,
+            "pointDotRadius": 3,
+            "pointDotStrokeWidth": 1,
+            "lineColor": {
+              "color": "rgba(71, 148, 218, 1)"
+            },
+            "pointDotFillColor": {
+              "color": "rgba(71, 148, 218, 1)"
+            },
+            "pointDotStrokeColor": {
+              "color": "rgba(71, 148, 218, 1)"
+            },
+            "pointDotInStopMode": false,
+            "symbol": "PLC1.MAIN.fbFeeder2.stHmi.stFeederInfo.stAxisY.fActVelocity"
+          }
+        ],
+        "type": "tchmi:framework#/definitions/TcHmi.Controls.Beckhoff.TcHmiTrendLineChart.ChartLineGraphDescriptionDefinitionList",
+        "persist": false,
+        "readonly": false
+      },
+      "Data": {
+        "type": "tchmi:project#/definitions/FetchData",
+        "persist": false,
+        "readonly": false
+      }
+    },
     "themedResources": {}
   },
   "trigger": [],
   "actionTemplates": [],
   "languages": {
-    "de": "Localization/de.localization",
-    "en": "Localization/en.localization"
+    "fr-CH": "Localization/ch-FR.localization",
+    "de-DE": "Localization/de-DE.localization",
+    "en-US": "Localization/en-US.localization"
   },
   "languageFallback": "",
   "disableLoadingOptimization": false,
@@ -103,6 +420,10 @@
       "basePath": "/Beckhoff.TwinCAT.HMI.Controls"
     },
     {
+      "name": "Beckhoff.TwinCAT.HMI.EcDiagnosticsControl",
+      "basePath": "/Beckhoff.TwinCAT.HMI.EcDiagnosticsControl"
+    },
+    {
       "name": "Beckhoff.TwinCAT.HMI.Framework",
       "basePath": "/framework"
     },
@@ -113,6 +434,10 @@
     {
       "name": "Beckhoff.TwinCAT.HMI.ResponsiveNavigation",
       "basePath": "/Beckhoff.TwinCAT.HMI.ResponsiveNavigation"
+    },
+    {
+      "name": "Beckhoff.TwinCAT.HMI.ScopeControl",
+      "basePath": "/Beckhoff.TwinCAT.HMI.ScopeControl"
     },
     {
       "name": "TsStateControl",

@@ -1,3 +1,49 @@
 ﻿{
+  "controlTypeValues": {
+    "TcHmi.Controls.Beckhoff.TcHmiImage": {
+      "attributes": {
+        "BorderStyle": {
+          "left": "Solid",
+          "right": "Solid",
+          "top": "Solid",
+          "bottom": "Solid"
+        },
+        "BorderRadius": {
+          "topLeft": 2.0,
+          "topRight": 2.0,
+          "bottomLeft": 2.0,
+          "bottomRight": 2.0,
+          "topLeftUnit": "px",
+          "topRightUnit": "px",
+          "bottomLeftUnit": "px",
+          "bottomRightUnit": "px"
+        },
+        "BorderColor": {
+          "color": "rgba(161, 153, 153, 1)"
+        },
+        "BorderWidth": {
+          "left": 2,
+          "right": 2,
+          "top": 2,
+          "bottom": 2,
+          "leftUnit": "px",
+          "rightUnit": "px",
+          "topUnit": "px",
+          "bottomUnit": "px"
+        }
+      },
+      "themedResources": {}
+    }
+  },
+  "controlClassValues": {
+    "my-img": {
+      "attributes": {
+        "BorderColor": {
+          "color": "rgba(232, 49, 49, 1)"
+        }
+      },
+      "themedResources": {}
+    }
+  },
   "$schema": "./../../../Packages/Beckhoff.TwinCAT.HMI.Framework.12.758.8/runtimes/native1.12-tchmi/Schema/ThemeDescription.Schema.json"
 }
