@@ -1,5 +1,5 @@
 ﻿<div id="C_Historize" data-tchmi-type="TcHmi.Controls.System.TcHmiContent" data-tchmi-top="0" data-tchmi-left="0" data-tchmi-creator-viewport-width="780" data-tchmi-creator-viewport-height="420" data-tchmi-right="0" data-tchmi-bottom="0">
-<div id="TcHmiTrendLineChart" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTrendLineChart" data-tchmi-end="Latest" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-start="First" data-tchmi-top="100" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-x-axis-name="x-axis 1" data-tchmi-x-sub-tick-steps="4" data-tchmi-y-sub-tick-steps="4" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-show-x-axis="false" data-tchmi-y-main-tick-steps="5" data-tchmi-show-menu-bar="true">
+<div id="TcHmiTrendLineChart" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTrendLineChart" data-tchmi-end="Latest" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-start="First" data-tchmi-top="100" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-x-axis-name="x-axis 1" data-tchmi-x-sub-tick-steps="4" data-tchmi-y-sub-tick-steps="4" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-show-x-axis="false" data-tchmi-y-main-tick-steps="5" data-tchmi-show-menu-bar="true" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
 <script data-tchmi-target-attribute="data-tchmi-y-axis" type="application/json">
 [
   {
@@ -58,7 +58,7 @@
 
 
 </div>
-<div id="TcHmiCombobox" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCombobox" data-tchmi-combobox-text="Select" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="38" data-tchmi-top-unit="px" data-tchmi-width="264" data-tchmi-width-unit="px">
+<div id="cbxhistorize" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiCombobox" data-tchmi-combobox-text="Select" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="38" data-tchmi-top-unit="px" data-tchmi-width="264" data-tchmi-width-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center" data-tchmi-drop-down-vertical-alignment="Center">
 <script data-tchmi-target-attribute="data-tchmi-content-padding" type="application/json">
 {
   "top": 3,
@@ -87,7 +87,7 @@
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
   {
-    "event": "TcHmiCombobox.onSelectionChanged",
+    "event": "cbxhistorize.onSelectionChanged",
     "actions": [
       {
         "objectType": "Condition",
@@ -117,7 +117,7 @@
                 "compare": {
                   "objectType": "Symbol",
                   "valueType": "tchmi:general#/definitions/UDINT",
-                  "symbolExpression": "%ctrl%TcHmiCombobox::SelectedId%/ctrl%"
+                  "symbolExpression": "%ctrl%cbxhistorize::SelectedId%/ctrl%"
                 },
                 "cases": [
                   {
@@ -173,7 +173,7 @@
                 "compare": {
                   "objectType": "Symbol",
                   "valueType": "tchmi:general#/definitions/UDINT",
-                  "symbolExpression": "%ctrl%TcHmiCombobox::SelectedId%/ctrl%"
+                  "symbolExpression": "%ctrl%cbxhistorize::SelectedId%/ctrl%"
                 },
                 "cases": [
                   {
@@ -229,6 +229,300 @@
 ]
 </script>
 </div>
-<div id="TcHmiTextblock" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock" data-tchmi-height="26" data-tchmi-height-unit="px" data-tchmi-left="280" data-tchmi-left-unit="px" data-tchmi-text="%ctrl%TcHmiCombobox::SelectedId%/ctrl%" data-tchmi-top="38" data-tchmi-top-unit="px" data-tchmi-width="150" data-tchmi-width-unit="px" data-tchmi-word-wrap="true">
-</div>
+
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "C_Historize.onAttached",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%ctrl%cbxhistorize::SelectedId%/ctrl%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/UDINT",
+          "value": 1
+        },
+        "asyncWait": true
+      },
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "symbolExpression": "%i%SelectedFeeder%/i%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "value": 2
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "SwitchCase",
+                "active": true,
+                "compare": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/UDINT",
+                  "symbolExpression": "%ctrl%cbxhistorize::SelectedId%/ctrl%"
+                },
+                "cases": [
+                  {
+                    "caseValue": {
+                      "objectType": "StaticValue",
+                      "valueType": "tchmi:general#/definitions/UDINT",
+                      "value": 1
+                    },
+                    "actions": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%TcHmiTrendLineChart::LineGraphDescription%/ctrl%",
+                        "value": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:general#/definitions/String",
+                          "symbolExpression": "%i%LineGraph_F02_X%/i%"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  },
+                  {
+                    "caseValue": {
+                      "objectType": "StaticValue",
+                      "valueType": "tchmi:general#/definitions/UDINT",
+                      "value": 2
+                    },
+                    "actions": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%TcHmiTrendLineChart::LineGraphDescription%/ctrl%",
+                        "value": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:general#/definitions/String",
+                          "symbolExpression": "%i%LineGraph_F02_Y%/i%"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  }
+                ],
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "SwitchCase",
+                "active": true,
+                "compare": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/UDINT",
+                  "symbolExpression": "%ctrl%cbxhistorize::SelectedId%/ctrl%"
+                },
+                "cases": [
+                  {
+                    "caseValue": {
+                      "objectType": "StaticValue",
+                      "valueType": "tchmi:general#/definitions/UDINT",
+                      "value": 1
+                    },
+                    "actions": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%TcHmiTrendLineChart::LineGraphDescription%/ctrl%",
+                        "value": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:general#/definitions/String",
+                          "symbolExpression": "%i%LineGraph_F01_X%/i%"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  },
+                  {
+                    "caseValue": {
+                      "objectType": "StaticValue",
+                      "valueType": "tchmi:general#/definitions/UDINT",
+                      "value": 2
+                    },
+                    "actions": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%TcHmiTrendLineChart::LineGraphDescription%/ctrl%",
+                        "value": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:general#/definitions/String",
+                          "symbolExpression": "%i%LineGraph_F01_Y%/i%"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  }
+                ],
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  },
+  {
+    "event": "%i%SelectedFeeder%/i%",
+    "actions": [
+      {
+        "objectType": "Condition",
+        "active": true,
+        "parts": [
+          {
+            "if": [
+              {
+                "compare1": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "symbolExpression": "%i%SelectedFeeder%/i%"
+                },
+                "compare2": {
+                  "objectType": "StaticValue",
+                  "valueType": "tchmi:general#/definitions/INT",
+                  "value": 2
+                },
+                "compareOperator": "==",
+                "logic": null
+              }
+            ],
+            "then": [
+              {
+                "objectType": "SwitchCase",
+                "active": true,
+                "compare": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/UDINT",
+                  "symbolExpression": "%ctrl%cbxhistorize::SelectedId%/ctrl%"
+                },
+                "cases": [
+                  {
+                    "caseValue": {
+                      "objectType": "StaticValue",
+                      "valueType": "tchmi:general#/definitions/UDINT",
+                      "value": 1
+                    },
+                    "actions": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%TcHmiTrendLineChart::LineGraphDescription%/ctrl%",
+                        "value": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:general#/definitions/String",
+                          "symbolExpression": "%i%LineGraph_F02_X%/i%"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  },
+                  {
+                    "caseValue": {
+                      "objectType": "StaticValue",
+                      "valueType": "tchmi:general#/definitions/UDINT",
+                      "value": 2
+                    },
+                    "actions": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%TcHmiTrendLineChart::LineGraphDescription%/ctrl%",
+                        "value": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:general#/definitions/String",
+                          "symbolExpression": "%i%LineGraph_F02_Y%/i%"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  }
+                ],
+                "asyncWait": true
+              }
+            ]
+          },
+          {
+            "else": [
+              {
+                "objectType": "SwitchCase",
+                "active": true,
+                "compare": {
+                  "objectType": "Symbol",
+                  "valueType": "tchmi:general#/definitions/UDINT",
+                  "symbolExpression": "%ctrl%cbxhistorize::SelectedId%/ctrl%"
+                },
+                "cases": [
+                  {
+                    "caseValue": {
+                      "objectType": "StaticValue",
+                      "valueType": "tchmi:general#/definitions/UDINT",
+                      "value": 1
+                    },
+                    "actions": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%TcHmiTrendLineChart::LineGraphDescription%/ctrl%",
+                        "value": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:general#/definitions/String",
+                          "symbolExpression": "%i%LineGraph_F01_X%/i%"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  },
+                  {
+                    "caseValue": {
+                      "objectType": "StaticValue",
+                      "valueType": "tchmi:general#/definitions/UDINT",
+                      "value": 2
+                    },
+                    "actions": [
+                      {
+                        "objectType": "WriteToSymbol",
+                        "active": true,
+                        "symbolExpression": "%ctrl%TcHmiTrendLineChart::LineGraphDescription%/ctrl%",
+                        "value": {
+                          "objectType": "Symbol",
+                          "valueType": "tchmi:general#/definitions/String",
+                          "symbolExpression": "%i%LineGraph_F01_Y%/i%"
+                        },
+                        "asyncWait": true
+                      }
+                    ]
+                  }
+                ],
+                "asyncWait": true
+              }
+            ]
+          }
+        ],
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
 </div>

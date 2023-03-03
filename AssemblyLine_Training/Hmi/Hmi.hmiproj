@@ -161,6 +161,15 @@
     <Content Include="Functions\UploadRecipe.js">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Images\transport-portal-normal.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Images\transport-portal-pressed.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Tablet.view">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Mobile.view">
       <SubType>Content</SubType>
     </Content>
@@ -171,6 +180,15 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="Server\TcHmiEcDiagnostics\TcHmiEcDiagnostics.Storage.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiEventLogger\TcHmiEventLogger.Config.default.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiEventLogger\TcHmiEventLogger.Config.remote.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Server\TcHmiEventLogger\TcHmiEventLogger.Storage.json">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Server\TcHmiRecipeManagement\TcHmiRecipeManagement.Config.default.json">
@@ -232,6 +250,7 @@
     <Folder Include="Contents" />
     <Folder Include="Functions" />
     <Folder Include="Server\TcHmiEcDiagnostics" />
+    <Folder Include="Server\TcHmiEventLogger" />
     <Folder Include="Server\TcHmiRecipeManagement" />
     <Folder Include="Server\TcHmiScope" />
     <Folder Include="Server\TcHmiSqliteHistorize" />
@@ -276,30 +295,39 @@
     </Content>
     <Content Include="Server\TcHmiLua\TcHmiLua.Config.default.json">
       <SubType>Content</SubType>
+      <Visible>True</Visible>
     </Content>
     <Content Include="Server\TcHmiLua\TcHmiLua.Config.remote.json">
       <SubType>Content</SubType>
+      <Visible>True</Visible>
     </Content>
     <Content Include="Server\TcHmiLua\TcHmiLua.Storage.json">
       <SubType>Content</SubType>
+      <Visible>True</Visible>
     </Content>
     <Content Include="Server\TcHmiSqliteLogger\TcHmiSqliteLogger.Config.default.json">
       <SubType>Content</SubType>
+      <Visible>True</Visible>
     </Content>
     <Content Include="Server\TcHmiSqliteLogger\TcHmiSqliteLogger.Config.remote.json">
       <SubType>Content</SubType>
+      <Visible>True</Visible>
     </Content>
     <Content Include="Server\TcHmiSqliteLogger\TcHmiSqliteLogger.Storage.json">
       <SubType>Content</SubType>
+      <Visible>True</Visible>
     </Content>
     <Content Include="Server\TcHmiUserManagement\TcHmiUserManagement.Config.default.json">
       <SubType>Content</SubType>
+      <Visible>True</Visible>
     </Content>
     <Content Include="Server\TcHmiUserManagement\TcHmiUserManagement.Config.remote.json">
       <SubType>Content</SubType>
+      <Visible>True</Visible>
     </Content>
     <Content Include="Server\TcHmiUserManagement\TcHmiUserManagement.Storage.json">
       <SubType>Content</SubType>
+      <Visible>True</Visible>
     </Content>
     <Content Include="Themes\Base\TcHmi.Controls.ResponsiveNavigation.TcHmiNavigationBar\Images\menu.png">
       <SubType>Content</SubType>

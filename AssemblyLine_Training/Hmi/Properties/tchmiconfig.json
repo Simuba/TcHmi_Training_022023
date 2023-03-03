@@ -100,41 +100,6 @@
   ],
   "content": [
     {
-      "url": "Contents/C_Historize.content",
-      "preload": false,
-      "keepAlive": false,
-      "loadSync": false,
-      "preloadBindings": false
-    },
-    {
-      "url": "Contents/C_Recipe.content",
-      "preload": false,
-      "keepAlive": false,
-      "loadSync": false,
-      "preloadBindings": false
-    },
-    {
-      "url": "Contents/C_Automatic.content",
-      "preload": false,
-      "keepAlive": false,
-      "loadSync": false,
-      "preloadBindings": false
-    },
-    {
-      "url": "Contents/C_Settings.content",
-      "preload": false,
-      "keepAlive": false,
-      "loadSync": false,
-      "preloadBindings": false
-    },
-    {
-      "url": "Contents/C_Scope.content",
-      "preload": false,
-      "keepAlive": false,
-      "loadSync": false,
-      "preloadBindings": false
-    },
-    {
       "url": "Contents/C_EcDiag.content",
       "preload": false,
       "keepAlive": false,
@@ -154,6 +119,41 @@
       "keepAlive": false,
       "loadSync": false,
       "preloadBindings": false
+    },
+    {
+      "url": "Contents/C_Historize.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Contents/C_Recipe.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Contents/C_Scope.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Contents/C_Automatic.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Contents/C_Settings.content",
+      "preload": false,
+      "keepAlive": false,
+      "loadSync": false,
+      "preloadBindings": false
     }
   ],
   "views": [
@@ -165,6 +165,12 @@
     },
     {
       "url": "Desktop.view",
+      "preload": false,
+      "keepAlive": false,
+      "preloadBindings": false
+    },
+    {
+      "url": "Tablet.view",
       "preload": false,
       "keepAlive": false,
       "preloadBindings": false
@@ -372,13 +378,13 @@
             "pointDotRadius": 3,
             "pointDotStrokeWidth": 1,
             "lineColor": {
-              "color": "rgba(71, 148, 218, 1)"
+              "color": "rgba(234, 185, 34, 1)"
             },
             "pointDotFillColor": {
-              "color": "rgba(71, 148, 218, 1)"
+              "color": "rgba(234, 185, 34, 1)"
             },
             "pointDotStrokeColor": {
-              "color": "rgba(71, 148, 218, 1)"
+              "color": "rgba(234, 185, 34, 1)"
             },
             "pointDotInStopMode": false,
             "symbol": "PLC1.MAIN.fbFeeder2.stHmi.stFeederInfo.stAxisY.fActVelocity"

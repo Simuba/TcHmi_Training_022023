@@ -22,7 +22,7 @@
   }
 ]
 </script>
-<div id="grAxisTop" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0">
+<div id="grAxisTop" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
 
 <script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
 [
@@ -52,7 +52,7 @@
   }
 ]
 </script>
-<div id="grCenterTop" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0">
+<div id="grCenterTop" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
 
 <script data-tchmi-target-attribute="data-tchmi-row-options" type="application/json">
 [
@@ -73,9 +73,10 @@
     "overflow": false
   },
   {
-    "height": 150.0,
-    "heightUnit": "px",
+    "height": 90.0,
+    "heightUnit": "%",
     "heightMode": "Value",
+    "maxHeight": 300.0,
     "maxHeightUnit": "px",
     "minHeightUnit": "px",
     "overflow": false
@@ -90,7 +91,7 @@
   }
 ]
 </script>
-<div id="rgAxisSpeed" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRadialGauge" data-tchmi-base-animation-time="1000" data-tchmi-gauge-alignment="Center" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="2" data-tchmi-height-unit="px" data-tchmi-label-range="1000" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-show-labels="true" data-tchmi-show-ticks="true" data-tchmi-show-value-text="false" data-tchmi-start-from-zero="true" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-value="%pp%AxisInfo::fActVelocity%/pp%" data-tchmi-max-value="1000" data-tchmi-min-value="-1000" data-tchmi-sub-tick-position="Inside" data-tchmi-label-position="Inside" data-tchmi-start-position="240" data-tchmi-end-position="-60" data-tchmi-unit-font-size="10" data-tchmi-unit="mm/s" data-tchmi-label-font-size="8" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center" data-tchmi-step="1">
+<div id="rgAxisSpeed" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiRadialGauge" data-tchmi-base-animation-time="1000" data-tchmi-gauge-alignment="Center" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="2" data-tchmi-height-unit="px" data-tchmi-label-range="1000" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-show-labels="true" data-tchmi-show-ticks="true" data-tchmi-show-value-text="false" data-tchmi-start-from-zero="true" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="5" data-tchmi-value="%pp%AxisInfo::fActVelocity%/pp%" data-tchmi-max-value="1000" data-tchmi-min-value="-1000" data-tchmi-sub-tick-position="Inside" data-tchmi-label-position="Inside" data-tchmi-start-position="240" data-tchmi-end-position="-60" data-tchmi-unit-font-size="10" data-tchmi-unit="mm/s" data-tchmi-label-font-size="8" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center" data-tchmi-step="1">
 
 <script data-tchmi-target-attribute="data-tchmi-value-format" type="application/json">
 {
@@ -113,7 +114,38 @@
 </div>
 </div>
 </div>
-<div id="lgAxisVelo" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiLinearGauge" data-tchmi-base-animation-time="1000" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="1" data-tchmi-height-unit="px" data-tchmi-label-range="1000" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-show-labels="true" data-tchmi-show-ticks="true" data-tchmi-show-value-text="true" data-tchmi-start-from-zero="true" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-value="%pp%AxisInfo::fActPosition%/pp%" data-tchmi-max-value="2000" data-tchmi-step="1" data-tchmi-label-position="Top" data-tchmi-unit="mm">
+<div id="grPosition" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="1" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-width-mode="Value">
+
+<script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
+[
+  {
+    "width": 1.0,
+    "widthUnit": "factor",
+    "widthMode": "Value",
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false
+  },
+  {
+    "width": 90.0,
+    "widthUnit": "%",
+    "widthMode": "Value",
+    "maxWidth": 500.0,
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false
+  },
+  {
+    "width": 1.0,
+    "widthUnit": "factor",
+    "widthMode": "Value",
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false
+  }
+]
+</script>
+<div id="lgAxisVelo" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiLinearGauge" data-tchmi-base-animation-time="1000" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-label-range="1000" data-tchmi-left-unit="%" data-tchmi-show-labels="true" data-tchmi-show-ticks="true" data-tchmi-show-value-text="true" data-tchmi-start-from-zero="true" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="%" data-tchmi-bottom="0" data-tchmi-value="%pp%AxisInfo::fActPosition%/pp%" data-tchmi-max-value="2000" data-tchmi-step="1" data-tchmi-label-position="Top" data-tchmi-unit="mm" data-tchmi-right-unit="%" data-tchmi-left="0" data-tchmi-right="0">
 <script data-tchmi-target-attribute="data-tchmi-range" type="application/json">
 [
   {
@@ -167,6 +199,7 @@
 }
 </script>
 
+</div>
 </div>
 </div>
 </div>

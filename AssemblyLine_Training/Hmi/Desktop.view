@@ -29,9 +29,9 @@
   }
 ]
 </script>
-<div id="rgMain" data-tchmi-type="TcHmi.Controls.System.TcHmiRegion" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="1" data-tchmi-height-unit="px" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-top="-5" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="5" data-tchmi-bottom="15" data-tchmi-target-content="Contents/C_Automatic.content">
+<div id="rgMain" data-tchmi-type="TcHmi.Controls.System.TcHmiRegion" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="1" data-tchmi-height-unit="px" data-tchmi-left="10" data-tchmi-left-unit="px" data-tchmi-top="10" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="10" data-tchmi-bottom="10" data-tchmi-target-content="Contents/C_Automatic.content">
 </div>
-<div id="nbMain" data-tchmi-type="TcHmi.Controls.ResponsiveNavigation.TcHmiNavigationBar" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="2" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-enable-mobile-switch="true" data-tchmi-switch-breakpoint="750" data-tchmi-nav-target-region-control-symbol="%ctrl%rgMain%/ctrl%" data-tchmi-nav-content-control-symbol="%ctrl%ncMain%/ctrl%" data-tchmi-alignment="Bottom" data-tchmi-padding-left-right="20">
+<div id="nbMain" data-tchmi-type="TcHmi.Controls.ResponsiveNavigation.TcHmiNavigationBar" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="2" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-enable-mobile-switch="true" data-tchmi-switch-breakpoint="750" data-tchmi-nav-target-region-control-symbol="%ctrl%rgMain%/ctrl%" data-tchmi-nav-content-control-symbol="%ctrl%ncMain%/ctrl%" data-tchmi-alignment="Bottom" data-tchmi-padding-left-right="20" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
 
 <script data-tchmi-target-attribute="data-tchmi-menu-source-data" type="application/json">
 [
@@ -55,7 +55,6 @@
   },
   {
     "name": "L_Data",
-    "page": "Contents/C_Historize.content",
     "imageWidthUnit": "px",
     "imageHeightUnit": "px",
     "children": [
@@ -115,7 +114,7 @@
 </div>
 <div id="ncMain" data-tchmi-type="TcHmi.Controls.ResponsiveNavigation.TcHmiNavigationContent" data-tchmi-grid-column-index="0" data-tchmi-grid-row-index="1" data-tchmi-height="350" data-tchmi-height-mode="Content" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0">
 </div>
-<div id="grStateBar" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height-unit="px" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="5" data-tchmi-bottom="5">
+<div id="grStateBar" data-tchmi-type="TcHmi.Controls.System.TcHmiGrid" data-tchmi-height-unit="px" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="5" data-tchmi-bottom="5" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
 
 <script data-tchmi-target-attribute="data-tchmi-column-options" type="application/json">
 [
@@ -128,8 +127,16 @@
     "overflow": false
   },
   {
-    "width": 1.0,
-    "widthUnit": "factor",
+    "width": 70.0,
+    "widthUnit": "px",
+    "widthMode": "Value",
+    "maxWidthUnit": "px",
+    "minWidthUnit": "px",
+    "overflow": false
+  },
+  {
+    "width": 70.0,
+    "widthUnit": "px",
     "widthMode": "Value",
     "maxWidthUnit": "px",
     "minWidthUnit": "px",
@@ -145,47 +152,13 @@
   }
 ]
 </script>
-<div id="scMain" data-tchmi-type="TcHmi.Controls.TsStateControl.TsStateControl" data-tchmi-blue-state="Man." data-tchmi-green-state="Auto." data-tchmi-grid-column-index="2" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-orange-state="Stop" data-tchmi-request-state="%s%PLC1.MAIN.fbFeeder1.stHmi.nStationState_Request|BindingMode=TwoWay%/s%" data-tchmi-response-state="%s%PLC1.MAIN.fbFeeder1.stHmi.nStationState_Respond%/s%" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="-5" data-tchmi-bottom="0">
+<div id="scMain" data-tchmi-type="TcHmi.Controls.TsStateControl.TsStateControl" data-tchmi-blue-state="Man." data-tchmi-green-state="Auto." data-tchmi-grid-column-index="3" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-orange-state="Stop" data-tchmi-request-state="%s%PLC1.MAIN.fbFeeder1.stHmi.nStationState_Request|BindingMode=TwoWay%/s%" data-tchmi-response-state="%s%PLC1.MAIN.fbFeeder1.stHmi.nStationState_Respond%/s%" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-right="0" data-tchmi-bottom="0" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center">
 </div>
-<div id="btnFeeder1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height-unit="px" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-text="Feeder1" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="5" data-tchmi-bottom="5">
-
+<div id="siFeeder2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiStateImage" data-tchmi-grid-column-index="2" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center" data-tchmi-state="%i%SelectedFeeder%/i%" data-tchmi-tooltip="Feeder 2" data-tchmi-right="0" data-tchmi-bottom="0">
 <script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
 [
   {
-    "event": "btnFeeder1.onPressed",
-    "actions": [
-      {
-        "objectType": "WriteToSymbol",
-        "active": true,
-        "symbolExpression": "%i%SelectedFeeder%/i%",
-        "value": {
-          "objectType": "StaticValue",
-          "valueType": "tchmi:general#/definitions/INT",
-          "value": 1
-        },
-        "asyncWait": true
-      }
-    ]
-  }
-]
-</script>
-
-<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
-[
-  {
-    "accessright": "operate",
-    "group": "Operator",
-    "permission": "Deny"
-  }
-]
-</script>
-</div>
-<div data-tchmi-grid-row-index="0" data-tchmi-grid-column-index="1" id="btnFeeder2" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiButton" data-tchmi-height-unit="px" data-tchmi-left="5" data-tchmi-left-unit="px" data-tchmi-text="Feeder2" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-word-wrap="true" data-tchmi-right="5" data-tchmi-bottom="5">
-
-<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
-[
-  {
-    "event": "btnFeeder2.onPressed",
+    "event": "siFeeder2.onMouseClick",
     "actions": [
       {
         "objectType": "WriteToSymbol",
@@ -203,20 +176,55 @@
 ]
 </script>
 
-<script data-tchmi-target-attribute="data-tchmi-access-config" type="application/json">
+<script data-tchmi-target-attribute="data-tchmi-state-list" type="application/json">
 [
   {
-    "accessright": "operate",
-    "group": "Operator",
-    "permission": "Deny"
+    "state": 1,
+    "stateIcon": "Images/transport-portal-pressed.svg"
   },
   {
-    "accessright": "observe",
-    "group": "Operator",
-    "permission": "Deny"
+    "state": 2,
+    "stateIcon": "Images/transport-portal-normal.svg"
   }
 ]
 </script>
+</div>
+<div id="siFeeder1" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiStateImage" data-tchmi-grid-column-index="1" data-tchmi-grid-row-index="0" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="0" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center" data-tchmi-state="%i%SelectedFeeder%/i%" data-tchmi-tooltip="Feeder 1" data-tchmi-right="0" data-tchmi-bottom="0">
+<script data-tchmi-target-attribute="data-tchmi-trigger" type="application/json">
+[
+  {
+    "event": "siFeeder1.onMouseClick",
+    "actions": [
+      {
+        "objectType": "WriteToSymbol",
+        "active": true,
+        "symbolExpression": "%i%SelectedFeeder%/i%",
+        "value": {
+          "objectType": "StaticValue",
+          "valueType": "tchmi:general#/definitions/INT",
+          "value": 1
+        },
+        "asyncWait": true
+      }
+    ]
+  }
+]
+</script>
+
+<script data-tchmi-target-attribute="data-tchmi-state-list" type="application/json">
+[
+  {
+    "state": 1.0,
+    "stateIcon": "Images/transport-portal-normal.svg"
+  },
+  {
+    "state": 2.0,
+    "stateIcon": "Images/transport-portal-pressed.svg"
+  }
+]
+</script>
+</div>
+<div id="umMain" data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiUserManagement" data-tchmi-height-unit="px" data-tchmi-left="0" data-tchmi-left-unit="px" data-tchmi-top="5" data-tchmi-top-unit="px" data-tchmi-width-unit="px" data-tchmi-background-image-horizontal-alignment="Center" data-tchmi-background-image-vertical-alignment="Center" data-tchmi-right="25" data-tchmi-bottom="5" data-tchmi-drop-down-font-size="18" data-tchmi-text-font-size="18" data-tchmi-user-name-font-size="18" data-tchmi-max-width="400">
 </div>
 </div>
 </div>

@@ -44,7 +44,7 @@
         vertical-align: middle;
         position: relative;
         
-        width: 75px;
+        min-width: 100px;
         text-align: center;;
         /* color gradient for default view */
         background-image: linear-gradient(135deg, #eff1f3, #aeb9c2);
